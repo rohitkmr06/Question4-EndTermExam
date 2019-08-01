@@ -8,8 +8,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 import java.io.InputStreamReader;
-public class ToughQuestions1 {
-    public static void main(String[] args) throws IOException {
+public class ToughQuestions1 
+{
+    public static void main(String[] args) throws IOException 
+    {
        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
        int acc_no;
        int bal;
@@ -29,23 +31,23 @@ public class ToughQuestions1 {
        Account a = new Account(acc_no,acc_name,type,bal);
        do
        {
-       System.out.println("1. Credit Account \n2. Debit Account \n3. Display Account Details");
-       System.out.println("Enter your choice");
-       choice = Integer.parseInt(br.readLine());
-       switch(choice)
-       {
-           case 1: System.out.println("Enter the amount to be credited");
-           credit = Integer.parseInt(br.readLine());
-           a.credit(credit);
-           break;
-           case 2: System.out.println("Enter the amount to be debited");
-           debit = Integer.parseInt(br.readLine());
-           a.debit(debit);
-           break;
-           case 3:a.display();
-           break;
-       }
-      }while(choice<4);
+    	   System.out.println("1. Credit Account \n2. Debit Account \n3. Display Account Details");
+    	   System.out.println("Enter your choice");
+    	   choice = Integer.parseInt(br.readLine());
+    	   switch(choice)
+    	   {
+           		case 1: System.out.println("Enter the amount to be credited");
+           				credit = Integer.parseInt(br.readLine());
+           				a.credit(credit);
+           				break;
+           		case 2: System.out.println("Enter the amount to be debited");
+           				debit = Integer.parseInt(br.readLine());
+           				a.debit(debit);
+           				break;
+           		case 3:	a.display();
+           				break;
+    	   }
+       	}while(choice<4);
     }
 }
 
